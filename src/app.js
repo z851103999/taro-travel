@@ -1,7 +1,7 @@
 import { Provider } from "react-redux";
 import createApp from "./dva";
 import models from "./models";
-// import "promise-prototype-finally";
+import "promise-prototype-finally";
 
 import "./app.scss";
 import "./assets/iconfont/iconfont.css";
@@ -13,10 +13,10 @@ const dvaApp = createApp({
 
 const store = dvaApp.getStore();
 
-const App = ({children}) =>{
+const App = (props) =>{
 
   return (
-    <Provider store={store}>{children}</Provider>
+    <Provider store={store}>{props.children}</Provider>
   )
 }
 

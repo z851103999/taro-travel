@@ -1,5 +1,7 @@
 import dayjs from "dayjs";
-
+/**
+ * 初始化状态
+ */
 const INIT_STATE = {
   dptCityId: 2,
   dptCityName: "上海",
@@ -10,6 +12,7 @@ const INIT_STATE = {
   cityType: "depart", // 选择的城市类型 depart: 出发， arrive：到达
   dptDate: dayjs().format("YYYY-MM-DD"), // 起飞时间
 };
+
 export default {
   namespace: "flightIndex",
   state: { ...INIT_STATE },

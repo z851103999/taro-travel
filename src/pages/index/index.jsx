@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { View } from "@tarojs/components";
+import FlightIndex from '../flight/index/index'
+import NoExploit from '../../components/NoExploit/index'
 import "./index.scss";
 
 function Index() {
@@ -35,7 +37,9 @@ function Index() {
         <View className='scrollbar' style={innerStyle}></View>
       </View>
       {
-
+        DEFAULT_TAB_LIST[tabIndex]['tab'] === 'flight' ? (
+          <FlightIndex />
+        ) : <NoExploit />
       }
     </View>
   )
